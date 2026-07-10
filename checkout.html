@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | JS Leather Works</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body data-page="checkout">
+    <main>
+      <h1>Checkout</h1>
+      <div class="grid-2">
+        <section class="order-summary">
+          <h2>Order Summary</h2>
+          <div data-checkout-summary></div>
+        </section>
+        <section>
+          <form class="form-stack" data-checkout-form>
+            <label>Email<input name="email" type="email" required></label>
+            <label>Phone number<input name="phone" required></label>
+            <label>Shipping information<textarea name="shipping" required></textarea></label>
+            <label>Payment method<select name="paymentMethod">
+              <option value="Venmo">Venmo</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Cash App">Cash App</option>
+            </select></label>
+            <button type="submit">Place order</button>
+          </form>
+          <div data-checkout-success></div>
+        </section>
+      </div>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

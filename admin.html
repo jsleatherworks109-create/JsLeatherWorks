@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | JS Leather Works</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body data-page="admin">
+    <main>
+      <h1>Admin Dashboard</h1>
+      <div class="admin-shell">
+        <aside class="admin-sidebar" data-admin-nav>
+          <a href="#" data-section="dashboard">Dashboard</a>
+          <a href="#" data-section="payments">Payment Methods</a>
+          <a href="#" data-section="orders">Orders</a>
+          <a href="#" data-section="shipping">Shipping</a>
+          <a href="#" data-section="site">Edit Site</a>
+          <a href="#" data-section="products">Products</a>
+          <button class="secondary" data-logout>Logout</button>
+        </aside>
+        <section>
+          <section id="dashboard" class="admin-section active">
+            <h2>Dashboard</h2>
+            <div class="product-grid" data-dashboard-stats></div>
+          </section>
+          <section id="payments" class="admin-section">
+            <h2>Payment Methods</h2>
+            <form class="form-stack" data-payment-form></form>
+          </section>
+          <section id="orders" class="admin-section">
+            <h2>Orders</h2>
+            <div class="grid-2">
+              <div data-orders-list></div>
+              <div data-order-detail></div>
+            </div>
+          </section>
+          <section id="shipping" class="admin-section">
+            <h2>Shipping</h2>
+            <div data-shipping-list></div>
+            <p class="small"><a href="https://www.shippo.com/" target="_blank" rel="noopener">Create shipping labels</a></p>
+          </section>
+          <section id="site" class="admin-section">
+            <h2>Edit Site</h2>
+            <form class="form-stack" data-site-form></form>
+          </section>
+          <section id="products" class="admin-section">
+            <h2>Products</h2>
+            <div data-category-editor></div>
+            <form class="form-stack" data-product-form>
+              <input type="hidden" name="productId" />
+              <label>Product name<input name="name"></label>
+              <label>Price<input name="price" type="number" step="0.01"></label>
+              <label>Description<textarea name="description"></textarea></label>
+              <label>Category<input name="category"></label>
+              <label><input type="checkbox" name="featured"> Featured</label>
+              <label>Product images<input type="file" name="images" multiple></label>
+              <div data-image-preview></div>
+              <div data-modifier-editor><h3>Text / List / Variable modifiers</h3></div>
+              <button type="button" data-add-modifier>Add modifier</button>
+              <div data-attribute-editor><h3>Attributes</h3></div>
+              <button type="button" data-add-attribute>Add attribute</button>
+              <button type="submit">Save product</button>
+            </form>
+            <div data-product-list></div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

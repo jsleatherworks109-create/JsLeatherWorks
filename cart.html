@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | JS Leather Works</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body data-page="cart">
+    <main>
+      <h1>Cart</h1>
+      <div class="grid-2">
+        <section>
+          <div data-cart-items></div>
+        </section>
+        <aside class="order-summary">
+          <h2>Summary</h2>
+          <p>Total: <strong data-cart-total></strong></p>
+          <a class="btn" href="checkout.html">Continue to checkout</a>
+        </aside>
+      </div>
+    </main>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
